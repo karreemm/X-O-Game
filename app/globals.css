@@ -102,3 +102,23 @@ button:hover {
   font-size: 25px;
   color: #fbfada;
 }
+
+@media (max-width: 700px) {
+  .largeContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  button{
+  margin-bottom:0px;
+  }
+  .container {
+    height: auto;
+    margin: 50px;
+  }
+  .xCounter,
+.oCounter {
+  margin-top: 5px;
+}
+}
