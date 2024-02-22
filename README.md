@@ -6,4 +6,4 @@ A simple X-O game using React js.
 - That command will generate a localhost link
 
 ## Note : 
-when you run this command, you might need to install TS packahes. Install them before using the link.
+when you run this command, you might need to install TS packages. Install them before using the link.
