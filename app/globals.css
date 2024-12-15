@@ -1,124 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 59, 130, 246;
+  --background-end-rgb: 139, 92, 246;
+}
+
 body {
-  background-color: #12372a;
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      rgb(var(--background-start-rgb)),
+      rgb(var(--background-end-rgb))
+    );
 }
 
-.largeContainer {
-  display: flex;
-  justify-content: space-between;
-}
-
-.result {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  margin: 30px;
-  width: 300px;
-}
-
-.resultStates {
-  display: flex;
-  justify-content: space-around;
-  width: 100%;
-}
-
-.X,
-.O {
-  display: flex;
-  flex-direction: column;
-}
-
-.xState,
-.oState {
-  color: #fbfada;
-  font-size: 1.5rem;
-}
-
-.xCounter,
-.oCounter {
-  margin-top: 25px;
-  font-size: 5.5rem;
-  color: #df826c;
-  text-align: center;
-}
-
-button {
-  background-color: #fbfada;
-  color: #12372a;
-  font-size: 1rem;
-  font-weight: bold;
-  width: 10rem;
-  height: 2rem;
-  margin-bottom: 100px;
-}
-
-button:hover {
-  background-color: #f5d776;
-  color: #000;
-}
-
-.container {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: auto;
-}
-
-.GameBoard {
-  width: 300px;
-  height: 300px;
-  border: solid 3px white;
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.square {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100px;
-  height: 100px;
-  border: solid 3px white;
-  box-sizing: border-box;
-}
-.cross,
-.circle {
-  font-size: 80px;
-  font-weight: bold;
-}
-.cross {
-  color: #df826c;
-}
-
-.circle {
-  color: #d0f288;
-}
-
-.state {
-  margin-top: 30px;
-  font-weight: bold;
-  font-size: 25px;
-  color: #fbfada;
-}
-
-@media (max-width: 700px) {
-  .largeContainer{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
   }
-  button{
-  margin-bottom:0px;
-  }
-  .container {
-    height: auto;
-    margin: 50px;
-  }
-  .xCounter,
-.oCounter {
-  margin-top: 5px;
-}
 }
