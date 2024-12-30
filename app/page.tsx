@@ -132,27 +132,29 @@ export default function TicTacToe() {
         animate={{ opacity: 1, y: 0 }}
         className="flex flex-col items-center w-full max-w-md"
       >
-        <div className="flex justify-between w-full gap-2 mb-8">
+        <div className="flex justify-between w-full gap-2 mb-3">
           <ScoreCard 
             player="X" 
             score={xCounter} 
             icon={<XIcon className="w-6 h-6 text-pink-400" />}
           />
-          <Button
-            onClick={handleReset}
-            className="bg-emerald-500 hover:bg-emerald-600 text-white flex items-center gap-2 flex-1"
-          >
-            <RefreshCwIcon className="w-4 h-4" />
-            New Game
-          </Button>
           <ScoreCard 
             player="O" 
             score={oCounter} 
             icon={<CircleIcon className="w-6 h-6 text-cyan-400" />}
           />
         </div>
+
+        <Button
+            onClick={handleReset}
+            className="bg-purple-100 hover:bg-purple-200 text-black flex items-center gap-2 flex-1 w-full"
+          >
+            <RefreshCwIcon className="w-4 h-4" />
+            New Game
+        </Button>
+
         
-        <div className="flex justify-center">
+        <div className="flex justify-center mt-8">
           <motion.div 
             className="grid grid-cols-3 gap-3 md:gap-4 w-full"
             initial={{ scale: 0.8 }}
